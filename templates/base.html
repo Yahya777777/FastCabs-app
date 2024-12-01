@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastCabs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>FastCabs</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/query/managers">Managers</a>
+            <a href="/query/female-drivers-glasgow">Female Drivers in Glasgow</a>
+            <a href="/query/staff-count">Staff Count</a>
+            <a href="/query/taxis-in-glasgow">Taxis in Glasgow</a>
+            <a href="/query/driver-allocation">Driver Allocation</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 FastCabs</p>
+    </footer>
+</body>
+</html>

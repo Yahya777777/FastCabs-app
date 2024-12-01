@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs by Driver</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jobs by Driver</h1>
+        <a href="/">Back to Dashboard</a>
+    </header>
+    <main>
+        <form action="/query/jobs-by-driver" method="POST" class="query-form">
+            <label for="driver_id">Driver ID:</label>
+            <input type="text" id="driver_id" name="driver_id" required>
+            <label for="date">Date (YYYY-MM-DD):</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Search</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 FastCabs. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

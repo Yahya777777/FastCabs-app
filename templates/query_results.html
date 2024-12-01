@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>{{ title }}</h1>
+            <a href="/" class="back-button">← Back to Dashboard</a>
+        </div>
+    </header>
+    <main>
+        {% if results %}
+        <div class="table-container">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        {% for column in results[0].keys() %}
+                            <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                        <tr>
+                            {% for cell in row %}
+                                <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="no-results">No results found for this query.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 FastCabs. Designed for efficiency and speed.</p>
+    </footer>
+</body>
+</html>
